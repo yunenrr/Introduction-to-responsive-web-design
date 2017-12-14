@@ -1,0 +1,96 @@
+/******************** GLOBAL *********************/
+*{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font: sans-serif;
+  box-sizing: border-box; /* Para que las cajas no tomen en cuenta el valor de los bordes, ya que está incluído en el valor de la caja y no como un valor aparte. */
+}
+
+.contenedor{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.fila{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  line-height: 100%;
+  clear: both; /* Respeta las cajas flotantes por filas, no en general. Es decir, en cada fila se tienen 12 columnas si alguna está vacía se queda vacía. */
+  display: table; /* Hace que los otros elementos respeten el área generado por las cajas. */
+}
+
+/*
+Se le aplican propiedades a todas las clases que inician con "col-".
+*/
+[class*="col-"]{
+  float: left;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.col-12{
+  width: 100%;
+  background-color: aqua;
+}
+
+.col-11{
+  width: 91.66666666%; /* Se saca: columna actual * 100/ cant. total de columnas. */
+  background-color: rebeccapurple;
+}
+
+.col-10{
+  width: 83.33333333%;
+  background-color: red;
+}
+
+.col-9{
+  width: 75%;
+  background-color: teal;
+}
+
+.col-8{
+  width: 66.66666666%;
+  background-color: tomato;
+}
+
+.col-7{
+  width: 58.33333333%;
+  background-color: yellow;
+}
+
+.col-6{
+  width: 50%;
+  background-color: indigo;
+}
+
+.col-5{
+  width: 41.66666666%;
+  background-color: olive;
+}
+
+.col-4{
+  width: 33.33333333%; /* En caso de usar decimales es recomendable usar 8. */
+  background-color: orangered;
+}
+
+.col-3{
+  width: 25%;
+  background-color: peru;
+}
+
+.col-2{
+  width: 16.66666666%;
+  background-color: seagreen;
+}
+
+.col-1{
+  width: 8.33333333%;
+  background-color: darkgoldenrod;
+}
